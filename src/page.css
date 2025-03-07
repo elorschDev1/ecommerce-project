@@ -1,0 +1,170 @@
+*{
+    box-sizing:border-box;
+  }
+  body{
+    margin:0;
+    padding:0;
+   background-image:url("movieBackground.jpg");
+    background-repeat:no-repeat;
+   background-size:cover;
+    background-attachment:fixed;
+  }
+  main h1{
+    color:rgb(255,255,255);
+    font-size:18px;
+    text-align:center;
+    padding:8px;
+  }
+  img{
+    height:auto;
+    max-width:100%;
+  }
+  main{
+  padding:20px;
+    width:100%;
+    display:grid;
+  }
+  nav{
+    width:100%;
+    display:inline;
+    padding:20px;
+  }
+  .nav-pills{
+    padding:20px;
+  }
+  p{
+    font-size:15px;
+    color:rgb(11,20,245);
+  }
+  #searchArea{
+    outline:none;
+    padding:14px;
+    border-radius:16px;
+    margin:5px;
+    color:blanchedalmond;
+  }
+  .nav-link{
+    font-size:14px;
+    color:rgb(255,255,255);
+  }
+  .nav-link:hover{
+    background-color: orange;
+  }
+  i{
+    color:rgb(255,255,255);
+    font-size:30px;
+  }
+  footer{
+    background-color:orangered;
+    padding:10px;
+    width:100%;
+  }
+  #movieSection{
+    padding:15px;
+    width:100%;
+    margin:10px;
+  }
+  #movieSection div{
+    padding:2px;
+    margin:5px;
+    width:100%;
+  }
+  table{
+    padding:30px;
+    margin:16px;
+  }
+  tr{
+    padding:12px;
+    margin:6px;
+  }
+  th{
+    padding:10px;
+    color:rgb(255,255,255);
+    font-size:15px;
+    text-align: center;
+  }
+  th,td{
+    border-bottom: 2px solid #0000AF;
+    border: 2px solid #0000AF;
+  }
+  td{
+    padding:16px;
+    font-size:16px;
+    color:rgb(255,255,255);
+  }
+  table button{
+    margin:5px;
+  }
+  form{
+    padding:10px 15px;
+    margin:7px;
+    background-color: lightsalmon;
+    border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    width:75%
+   }
+  input{
+    padding:13px;
+    border-radius:20px;
+    margin:4px;
+    outline:none;
+    background-color: black;
+    color:burlywood;
+  }
+  form p{
+    color:darkblue;
+    font-size:20px;
+  }
+  label{
+    color:rgb(255,255,255);
+    font-size:17px;
+  }
+  button{
+    background-color:#0000AF;
+    color:rgb(255,255,255);
+    padding:6px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    border-radius:1%;
+  }
+  .row{
+    padding: 15px;
+  }
+.carousel-slide{
+  width:60%;
+}
+ @media screen and (min-width:650px){
+    #movieSection{
+      padding:10px;
+      width:100%;
+      display:grid;
+      justify-content: center;
+      align-items: center;
+    }
+    .row div{
+      margin:10px;
+      width:40%;
+      font-size: 10px; 
+    }
+    a{
+      font-size:30px;
+    }
+    #movieSection div{
+      width:94%;
+      margin:28px;
+    }
+    form{
+      width:60%;
+    }
+    button{
+      width:60%;
+    }
+    table{
+      width:50%;
+      margin:8px;
+    }
+    
+  }

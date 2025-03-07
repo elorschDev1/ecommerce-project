@@ -1,0 +1,117 @@
+*{
+    box-sizing:border-box;
+}
+.app{
+  
+    margin:0;
+    width:100vw;
+    height:100vh;
+}
+#main-heading{
+    color:rgb(255,255,255);
+    font-size:18px;
+    text-align:center;
+    padding:8px;
+}
+.searchArea{
+    outline:none;
+    padding:14px;
+    border-radius:16px;
+    margin:5px;
+    color:black;
+  }
+body,html{
+    margin:0;
+    padding:0;
+    height:100%;
+    background-image: url('/movieBackground.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+img{
+    height:auto;
+}
+/*.navigation-bar{
+    width:100%;
+     margin-top: 20px;
+    display:flex;
+}*/
+.nav-link{
+    font-size:16px;
+    color:rgb(255,255,255);
+    text-decoration: none;
+   /* margin-left: 12px;*/
+  }
+  .searchButton{
+    padding:12px;
+    background-color:orangered;
+    color:#000;
+    border-radius:25px;
+  }
+  .card-body p{
+    color:blue;
+  }
+.footer{
+    background-color:orangered;
+    padding:10px;
+    width:100%; 
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    
+}
+i{
+    color:rgb(255,255,255);
+    font-size:30px;
+  }
+  .row{
+    margin:10px;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    column-gap:12px;
+    row-gap:30px;
+    padding: 55px;
+  }
+  .row div{
+    width:100px;
+  }
+.nav-link:hover{
+    background-color:orange;
+    color:black;
+}
+.addMovie{
+    padding:20px;
+    font-size: medium;
+    background-color: blue;
+    color:rgb(255,255,255);
+    border-radius:25px;
+}
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding:12px;
+}
+form label{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    color: yellow;
+}
+form input{
+    background-color:azure;
+}
+@media screen and (max-width:468px){
+    .row div{
+        width:130px;
+    }
+}
+@media screen and (min-width:650px){
+    .row{
+        column-gap:normal;
+    }
+    .row div{
+        width:250px;
+      }
+    
+  }

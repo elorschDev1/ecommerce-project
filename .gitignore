@@ -25,7 +25,3 @@ dist-ssr
 eslint.config.js
 guide.php
 movieProject.html
-package-lock.json
-package.json
-README.md
-vite.config.js

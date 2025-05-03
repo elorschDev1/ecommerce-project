@@ -40,7 +40,7 @@ const OperationFortuneDetails = () => {
     <h1>Movie Description</h1>
     <p>Elite spy Orson Fortune must track down and stop the sale of a deadly new weapons technology wielded by billionaire arms broker Greg Simmonds. Reluctantly teamed up with some of  the world's best operatives, Fortune and his team recruit Hollywood's biggest movie star, Danny Francesco, to help them improve on their gloe-trotting mission to save the world.</p>
     </div>
-    <div className="operationFortune"><AddToCart/></div>
+    <div className="Operation Fortune"><AddToCart/></div>
     </div>
     </>
   )

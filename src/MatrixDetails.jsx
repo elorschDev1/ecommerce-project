@@ -39,7 +39,7 @@ const MatrixDetails = () => {
     <h1>Movie Description</h1>
     <p>Neo (Keanu Reeves)believes that Morpheus(Laurence Fishburne),an elusive figure considered to be the most dangerous man alive, can answer his question--What is the matrix? Neo is contacted by Trinity (Carrie - Ann Moss), a beautiful stranger who leads him into an underworld where he meets Morpheus. They fight a brutal battle for their lives against a cadre of viviously intelligent secret agents. It is a teuth that could cost Neo something more precious than his life.               </p>
     </div> 
-    <div className="matrix"><AddToCart/></div>
+    <div className="The Matrix"><AddToCart/></div>
     </div>
     </>
   )

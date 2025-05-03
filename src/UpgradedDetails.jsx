@@ -41,7 +41,7 @@ const UpgradedDetails = () => {
     <h1>Movie Description</h1>
     <p>An aspiring art intern is invited on a last minute work trip to London, where she meets a handsome stranger.</p>
     </div> 
-    <div className="upgraded"> <AddToCart/></div>
+    <div className="Upgraded"> <AddToCart/></div>
     </div>
     </>
   )

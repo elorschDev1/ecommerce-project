@@ -41,7 +41,7 @@ const LiftDetails = () => {
     <h1>Movie Description</h1>
     <p>A master thief is wooed by his ex-girlfriend and the FBI to pull off an impossible heist with his international crew on a 777 passenger  flight from London to Zurich.</p>
     </div> 
-    <div className="lift"><AddToCart/></div>
+    <div className="Lift"><AddToCart/></div>
     </div>
    
     </>

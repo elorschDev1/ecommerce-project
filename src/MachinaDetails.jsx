@@ -39,7 +39,7 @@ const MachinaDetails = () => {
         <h1>Movie Description</h1>
         <p>Caleb Smith (Domhnall Gleeson) a programmer at a hige internet company, wins a contest that enables him to spend a week at the private estate of Nathan.</p> 
          </div>
-         <div className="machina"> <AddToCart/></div>
+         <div className="Ex Machina"> <AddToCart/></div>
          </div>
          </>
   )

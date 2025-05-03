@@ -39,7 +39,7 @@ const FalconRisingDetails = () => {
     <h1>Movie Description</h1>
     <p>A former Marine (Micheal Jai White) travels to Brazil to hunt down the brutal Japanese mobsters who attacked his siter and left her for dead.</p>
     </div>
-    <div className="falcon"> <AddToCart/></div>
+    <div className="Falcon Rising"> <AddToCart/></div>
     </div>
     </>
     

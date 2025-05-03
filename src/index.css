@@ -37,12 +37,6 @@ img{
      margin-top: 20px;
     display:flex;
 }*/
-.nav-link{
-    font-size:16px;
-    color:rgb(255,255,255);
-    text-decoration: none;
-   /* margin-left: 12px;*/
-  }
   .searchButton{
     padding:12px;
     background-color:orangered;
@@ -64,18 +58,24 @@ img{
 i{
     color:rgb(255,255,255);
     font-size:30px;
+
   }
-  .row{
-    margin:10px;
+  
+ .row{
+    margin:25px;
     display:grid;
-    grid-template-columns: auto auto auto;
-    column-gap:12px;
+    grid-template-columns: auto auto auto; 
+    column-gap:15px;
     row-gap:30px;
-    padding: 55px;
+    padding:10%;
   }
   .row div{
     width:100px;
   }
+  /*.row div{
+    width:250px;
+    padding:10px;
+  }*/
 .nav-link:hover{
     background-color:orange;
     color:black;
@@ -101,7 +101,7 @@ form label{
 form input{
     background-color:azure;
 }
-@media screen and (max-width:468px){
+/*@media screen and (max-width:468px){
     .row div{
         width:130px;
     }
@@ -115,3 +115,10 @@ form input{
       }
     
   }
+*/
+/*@media screen and (max-width:650px){
+    .row div{
+        width:120px;
+    
+    }
+}*/

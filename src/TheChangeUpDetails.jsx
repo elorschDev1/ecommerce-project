@@ -41,7 +41,7 @@ const TheChangeUpDetails = () => {
     <h1>Movie Description</h1>
     <p>The film stars Ryan Reynolds and Jason Bateman as Mitch Planko and dave Lockwood, two best friends living in Atlanta who "switch bodies" after urinating...</p>
     </div>
-    <div className="changeUp"><AddToCart/></div>
+    <div className="The Change Up"><AddToCart/></div>
     </div>
     </>
   )

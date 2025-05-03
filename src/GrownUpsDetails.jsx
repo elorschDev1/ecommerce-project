@@ -41,7 +41,7 @@ const GrownUpsDetails = () => {
     <h1>Movie Description</h1>
     <p>A single man who drinks too much. A father with three daughters who he rarely sees. A guy who is overweight and unemployed. A hen pecked househusband. a successful Hollywood agent married to a fashion designer . What do these five men have in common? They used to play for the  same basketball team at school. Now, their former coach has died, and they were reunited at his funeral. Will the group rediscover old bonds?</p> 
     </div>
-    <div className="grownUps"> <AddToCart/></div>
+    <div className="Grown Ups"> <AddToCart/></div>
     </div>
    </>
   )

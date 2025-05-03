@@ -40,7 +40,7 @@ const YearOneDetails = () => {
     <h1>Movie Description</h1>
     <p>After Neanderthal hunter Zed (Jack Black) is exiled for eating the forbidden fruit, he and his sardonic buddy Oh (Micheal Cera) leave their village and begin an epic journey through history. The pals encounter biblical characters suchas cain (David Cross) and Abel, Abraham (Hank Azaria), and others, and wind up in Sodom. Along the way, Zed debunks common beliefs and replaces them with his own delusions of grandeur.</p>
     </div> 
-    <div className="yearOne"><AddToCart/></div>
+    <div className="Year One"><AddToCart/></div>
     </div>
    
     </>

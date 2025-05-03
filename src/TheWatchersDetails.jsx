@@ -41,7 +41,7 @@ const TheWatchersDetails = () => {
     <h1>Movie Description</h1>
     <p>A 28-year-old artist gets stranded in an expansive, untouched forest in Western Ireland.Finding shelter, she unknowingly becomes trapped alongside three strangers who are stalked by mysterious creatures every night. </p>
     </div> 
-    <div className="theWatchers"><AddToCart/></div>
+    <div className="The Watchers"><AddToCart/></div>
     </div>
     
     </>

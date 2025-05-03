@@ -39,7 +39,7 @@ const TripleFrontierDetails = () => {
     <h1>Movie Description</h1>
     <p>Former Special Forces Operatives reunite to plan a heist in a sparsely populated multi border zone of South America. For the first time in their prestigious careers, these unsung heroes undertake their dangerous mission for themselves instead of their country. But when an unexpected  turn and threaten to spiral out of control, their skills, their loyalties, and their morals are pushed to a breaking point in an epic battle for survival.</p>
     </div> 
-    <div className="tripleFrontier"> <AddToCart/></div>
+    <div className="Triple Frontier"> <AddToCart/></div>
     </div>
     </>
   )

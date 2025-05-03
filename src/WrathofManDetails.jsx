@@ -40,7 +40,7 @@ const WrathofManDetails=()=>{
         <h1>Movie Description</h1>
         <p>Mysterious and wild eyed,a new security guard for a cash and truck surprises his coworkers when he unleashes his skills during a heist.They're left wondering who he is.</p>
         </div>
-        <div className="wrath"> <AddToCart/></div>
+        <div className="Wrath of Man"> <AddToCart/></div>
         </div>
         </>
     )

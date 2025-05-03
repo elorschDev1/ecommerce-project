@@ -41,7 +41,7 @@ const EdgeOfTomorrowDetails = () => {
     <h1>Movie Description</h1>
     <p>When earth falls under attack from invincible aliens, no military unit in the world is able to beat them.Maj William Cage (Tom Cruise), an officer who has never seen combat, is assigned to a suicide mission. Killed within moments, cage finds himself thrown into a time loop, in which he relives the same brutal fight--and his death--over and over again. However, Cage's fighting skills improve with each encore,bringing him and a comrade (Emily Blunt)ever closer to defeating the aliens.  </p>
     </div> 
-    <div className="edge"> <AddToCart/></div>
+    <div className="Edge of Tomorrow"> <AddToCart/></div>
     </div>
     </>
   )

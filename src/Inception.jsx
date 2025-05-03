@@ -5,7 +5,7 @@ const Inception = () => {
     if(e.target.classList.contains("inceptionMovie"))navigate("/inceptionDetails");
   }
   return (
-      <div className="card col scifiMovie inceptionMovie movies" onClick={handleClick}>
+      <div className="card col scifiMovie inceptionMovie movies h-100" onClick={handleClick}>
               <img src="/inception.jpg" alt="" className="card-img-top scifiMovie inceptionMovie"/>
                                     <div className="card-body scifiMovie inceptionMovie">
                                                 <p className="inceptionMovie">Inception</p>

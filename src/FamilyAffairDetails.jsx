@@ -41,7 +41,7 @@ const FamilyAffairDetails = () => {
     <h1>Movie Description</h1>
     <p>A surprising romance kicks off comic consequences for a young woman, her mother and her movie star boss, as they face the complications of love, sex and identity.</p>
     </div> 
-    <div className="familyAffair"> <AddToCart/></div>
+    <div className="A Family Affair"> <AddToCart/></div>
     </div>
     </>
   )

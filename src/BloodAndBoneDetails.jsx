@@ -39,7 +39,7 @@ const BloodAndBoneDetails = () => {
     <h1>Movie Description</h1>
     <p>Ex-con Isaiah Bone moves to Los Angeles after his release. His goal is to fulfill a promise to a dead friend by taking the local underground fighting world by storm. He defeats every opponent making thousands of dollars in the process.</p>
     </div>
-    <div className="bloodAndBone"> <AddToCart/></div>
+    <div className="Blood And Bone"> <AddToCart/></div>
     </div> 
     </>
   )

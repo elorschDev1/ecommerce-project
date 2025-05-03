@@ -41,7 +41,7 @@ const ArcadianDetails = () => {
     <h1>Movie Description</h1>
     <p>In the near future on a decimated earth, Paul and his twin sons face a terror at night when  ferocious creatures awaken. When Paul is nearly killed , the boys come up with a plan for survival, using everything their father taught them to keep him alive.</p>
     </div> 
-    <div className="arcadian"> <AddToCart/></div>
+    <div className="Arcadian"> <AddToCart/></div>
     </div>
   
     </>

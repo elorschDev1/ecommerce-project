@@ -42,7 +42,7 @@ const QuietPlaceDetails = () => {
     <h1>Movie Description</h1>
     <p>A Quiet Place is a 2018 American post-apocalyptic horror film directed by John Krasinki. The screenplay was written by Scott Beck and Bryan Woods from a story they concieved, with contributions by Krasinski after he joined the project. The plot revolves around a mother (Emily Blunt) and father (Krasinski) who struggle to survive and raise their children (Millicent Simmonds and Noah Jupe) in a post-apocalyptic world inhabited by blind extaterrestial creatures with an acute sense of hearing.</p>
     </div>
-    <div className="quietPlace"><AddToCart/></div>
+    <div className="A Quiet Place:Day One"><AddToCart/></div>
     </div>
     
     </>

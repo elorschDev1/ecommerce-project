@@ -41,7 +41,7 @@ const AbigailDetails = () => {
     <h1>Movie Description</h1>
     <p>A group of would be criminals kidnaps the daughter of a powerful underworld figure. Holding her for ransom in an isolated mansion, their plan starts to unravel when they discover their young captive is actually a bloodthirsty vampire. </p>
     </div> 
-    <div className="abigail"><AddToCart/></div> 
+    <div className="Abigail"><AddToCart/></div> 
     </div>
    
     </>

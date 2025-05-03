@@ -39,7 +39,7 @@ const TheRevenantDetails = () => {
         <h1>Movie Description</h1>
         <p>While exploring the wildnerness in 1823, frontiersman HUgh Glass (Leonardo Dicaprio)  sustains life threaatening injuries  from a brutal bear attack. When a member (Tom Hardy) of his hunting team kills his young son (Forrest Goodluck) and leaves him for dead, Glass must utilise his survival skills to find a way back to civilisation. Grief stricken and fueled by vengeace, the legendary fur trapper treks through the snowy terrain to track down the man who betrayed him.</p>
         </div>
-        <div className="revenant"> <AddToCart/></div>
+        <div className="The Revenant"> <AddToCart/></div>
         </div>
         </>
   )

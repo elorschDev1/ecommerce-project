@@ -41,7 +41,7 @@ const ArrivalDetails = () => {
         <p> Louise Banks daughter Hannah, dies at the age of twelve from an incurable illness.
         Twelve extraterrestial spaccrafts hover over various locations around the earth. In the ensuing wide spread panic,affected nations send military and scientific experts to monitor and study them.</p>
                 </div>
-                <div className="arrival"> <AddToCart/></div>
+                <div className="Arrival"> <AddToCart/></div>
                 </div>
     </>
   )

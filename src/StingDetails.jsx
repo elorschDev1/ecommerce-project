@@ -42,7 +42,7 @@ const StingDetails = () => {
     <h1>Movie Description</h1>
     <p>Charlotte is a rebelious 12 year old girl who finds a spider in her rundown apartment building. She keeps it in a jar, but it soon starts to grow at a monstrous rate and develops an insatiable appetite for blood. As her neighbors begin to disappear, Charlotte and her family find themselves in a desparate fight for their lives against a ravenous arachnid with a taste for human flesh. </p>
     </div>
-    <div className="sting"> <AddToCart/></div>
+    <div className="Sting"> <AddToCart/></div>
     </div>
   
     </>

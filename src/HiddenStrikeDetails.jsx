@@ -39,7 +39,7 @@ const HiddenStrikeDetails = () => {
         <h1>Movie Description</h1>
         <p>Two former soldiers face non-stop danger as they travel along one of the most dangerous roads in the world.</p>   
         </div>
-        <div className="hiddenStrike"> <AddToCart/></div>
+        <div className="Hidden Strike"> <AddToCart/></div>
         </div>
         </>
   )

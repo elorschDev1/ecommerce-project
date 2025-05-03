@@ -39,7 +39,7 @@ const HeartOfStoneDetails = () => {
     <h1>Movie Description</h1>
     <p>Rachel Stone is an intelligence operative, the only woman that stands between  her powerful global peackeeping organization  and the loss of its most valuable -- and dangerous -- asset.</p>
     </div>
-    <div className="heartOfStone"> <AddToCart/></div>
+    <div className="Heart of Stone"> <AddToCart/></div>
     </div>
     </>
   )

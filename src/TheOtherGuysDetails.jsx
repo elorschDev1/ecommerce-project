@@ -41,7 +41,7 @@ const TheOtherGuysDetails = () => {
     <h1>Movie Description</h1>
     <p>Unlike their heroic counterparts on the force,desk-bound NYPD  detectives Gamble (Will Ferrell) and Hoitz (Mark Wahlberg) garner no headlines as they work day to day. Gamble relishes his job as a paper pusher, but Hoitz is itching to get back on the street and make a name for himself. When a seemingly minor case turns out to be a big deal, the two cops finally get a chance to prove to their comrades that they have the right stuff. </p>
     </div>
-    <div className="guys"><AddToCart/></div>
+    <div className="The Other Guys"><AddToCart/></div>
     </div>
     </>
   )

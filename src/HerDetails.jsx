@@ -41,7 +41,7 @@ const HerDetails = () => {
         <h1 className="text-white">Movie Description</h1>
         <p className="text-white">A sensitive and soulful man earns a living by writing letters for other people. Left heart-broken after his marriage ends, Theodre(Joaquin Phoenix)  becomes fascinated with a new operating system,which reportedly develops into an intuitive and unique entity in its own right. He starts the program and meets Samantha (Scarlett Johansonn), whose voice reveals a playful and sensitive personality. Though "friends" initially, the relationship soon develops into love.</p>
         </div>
-        <div className="her"> <AddToCart/></div>
+        <div className="Her"><AddToCart/></div>
         </div>
         </>
   )

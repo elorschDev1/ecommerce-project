@@ -40,7 +40,7 @@ const DamselDetails = () => {
         <h1>Movie Description</h1>
         <p>A young woman agrees to marry a prince-only to discover it was all a trap. She is thrown into a cave with a fire breathing dragon and must rely on hr wits and will to survive.</p>
         </div> 
-        <div className="damsel"> <AddToCart/></div>  
+        <div className="Damsel"> <AddToCart/></div>  
         </div>
        
         </>

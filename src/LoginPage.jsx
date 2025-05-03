@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
 import {useState,useContext} from 'react';
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./context/UserContext";
 import ButtonContext from "./context/ButtonContext";
+import CartPageContext from "./context/CartPageContext";
 const LoginPage = () => {
+  // eslint-disable-next-line no-unused-vars
   let {loggedIn,setLoggedIn,currentUserEmail,setCurrentUserEmail}=useContext(UserContext);
   let {buttonClicked}=useContext(ButtonContext);
+  let {cartIconClicked}=useContext(CartPageContext);
   const [email,setEmail]=useState("");
   let [emailError,setemailError]=useState("");
   const [password,setPassword]=useState("");
@@ -88,12 +91,20 @@ const handlePasswordChange=(e)=>{
       console.log(loggedIn);
     },1500)
     if(buttonClicked===true)navigate(-1);
-
+    
+   }
+   if(data.message==="Login successful"&&cartIconClicked===true){
+    alert("Redirecting you to your selected products page.");
+    setTimeout(()=>{
+      navigate("/cart");
+    },1000)
+  
    }
    if(data.message==="Passwords do not match")console.log("Reset password");
    if(data.message==="No user found with this email address,sign up to create an account.")navigate("/signup");
   } 
   }
+  
   return (
     <form id="loginForm" noValidate role="form" onSubmit={handleSubmit} className="container-fluid">
       <h4 className="text-white text-center">Login Here:</h4>

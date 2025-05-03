@@ -42,7 +42,7 @@ const ImmaculateDetails = () => {
     <h1>Movie Description</h1>
     <p>An American nun embarks on a new journey when she joins a remote convent in the Italian countryside. However, her warm welcome quickly turns into a nightmare when she discovers her new home harbours a sinister secret and unspeakable horrors.</p>
     </div> 
-    <div className="immaculate"> <AddToCart/></div>
+    <div className="Immaculate"> <AddToCart/></div>
     </div>
   
     </>

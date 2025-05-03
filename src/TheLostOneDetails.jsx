@@ -39,7 +39,7 @@ const TheLostOneDetails = () => {
     <h1>Movie Description</h1>
     <p>Since 1865 , treasure hunters have searched, but little of that immense wealth has ever been found. Now, one hundred and sixty years later, two factions of what remains of the Knights of the golden circle want lost treasure-one to spend for their own ends, the other to preserve it.</p>
     </div>
-    <div className="lostOne"><AddToCart/></div>
+    <div className="The Lost One"><AddToCart/></div>
     </div>
    
     </>

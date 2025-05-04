@@ -75,7 +75,7 @@ const handlePasswordChange=(e)=>{
     
     formData.append("email",email);
      formData.append("password",password);
-    const res=await fetch("http://localhost/ecommerce/logindetails.php",{
+    const res=await fetch("https://edgarlorschmoviestore.rf.gd/logindetails.php",{
       method:"POST",
       body:formData,
     });

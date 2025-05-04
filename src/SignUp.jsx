@@ -104,7 +104,7 @@ const SignUp = () => {
    formData.append("phone",telephoneValue);
    formData.append("password",passwordValue);
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
-  const res=await fetch("http://localhost/ecommerce/server.php",{
+  const res=await fetch("https://edgarlorschmoviestore.rf.gd/server.php",{
     method:"POST",
     body:formData //body is the payload of the request:Its the thing the client is sending to the server
   });

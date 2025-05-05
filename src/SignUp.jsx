@@ -106,6 +106,9 @@ const SignUp = () => {
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
   const res=await fetch("https://edgarlorschmoviestore.rf.gd/server.php",{
     method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
     body:formData //body is the payload of the request:Its the thing the client is sending to the server
   });
   const  data=await res.json();

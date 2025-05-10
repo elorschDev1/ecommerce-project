@@ -111,7 +111,8 @@ const SignUp = () => {
     },*/
     body:formData //body is the payload of the request:Its the thing the client is sending to the server
   });
-  const  data=await res.json();
+  console.log(res.status);
+  const  data=await res.json();//the Promise resolved into a response object
  alert(data);
  if(data==="This email already exists in our systems."){
   alert("Head over to the login section to log into your account.");

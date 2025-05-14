@@ -104,16 +104,13 @@ const SignUp = () => {
    formData.append("phone",telephoneValue);
    formData.append("password",passwordValue);
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
-  const res=await fetch("https://edgarlorschmoviestore.rf.gd/server.php",{
+   const res=await fetch("https:edgarlorschmoviestore.rf.gd/server.php",{
     method:"POST",
-   /* headers:{
-      "Content-Type":"application/json"
-    },*/
-    body:formData //body is the payload of the request:Its the thing the client is sending to the server
-  });
-  console.log(res.status);
-  const  data=await res.json();//the Promise resolved into a response object
- alert(data);
+    body:formData()
+   })
+   const data=await res.text();
+   console.log(data);
+ 
  if(data==="This email already exists in our systems."){
   alert("Head over to the login section to log into your account.");
   navigate("/login");

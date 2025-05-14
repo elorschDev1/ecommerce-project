@@ -104,7 +104,7 @@ const SignUp = () => {
    formData.append("phone",telephoneValue);
    formData.append("password",passwordValue);
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
-   const res=await fetch("https:edgarlorschmoviestore.rf.gd/test-cors.php",{
+    const res=await fetch("https://edgarlorschmoviestore.rf.gd/test-cors.php",{
     method:"POST",
    // body:formData()
    body:JSON.stringify("Faith")

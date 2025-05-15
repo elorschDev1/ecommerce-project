@@ -103,11 +103,12 @@ const SignUp = () => {
    formData.append("email",emailValue);
    formData.append("phone",telephoneValue);
    formData.append("password",passwordValue);
+   let certainUser="Faith";
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
     const res=await fetch("https://edgarlorschmoviestore.rf.gd/test-cors.php",{
     method:"POST",
    // body:formData()
-   body:JSON.stringify("Faith")
+   body:JSON.stringify(certainUser)
    })
    const data=await res.text();
    console.log(data);

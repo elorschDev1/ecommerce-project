@@ -19,7 +19,7 @@ const App = () => {
           <CartPageProvider>
     <div className="app">
       
-      {/*   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
                 <button 
                 className="navbar-toggler"
@@ -42,34 +42,6 @@ const App = () => {
                         <li className="nav-item"><Link to="/comedy" className='nav-link'>Comedy</Link></li>
                         <li className="nav-item"><Link to="/horror" className='nav-link'>Horror</Link></li>
                        
-                    </ul>
-                </div>
-            </div>
-        </nav>*/}
-           <nav className="navbar navbar-expand-lg navbar-dark">
-            <div className="container">
-                <button 
-                className="navbar-toggler"
-                type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#navbarNav'
-                aria-controls='navbarNav'
-                aria-expanded='false'
-                aria-label='Toggle navigation'
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                {/*Collapsible Menu*/}
-                <div className="collapse navbar-collapse" id='navbarNav'>
-                    <ul className="navbar-nav ms-auto">
-                        <li className="nav-item"><Link to="/" className='nav-link text-white'>Home</Link></li>
-                        <li className="nav-item"><Link to="/about" className='nav-link text-white'>About Us</Link></li>
-                        <li className="nav-item"><Link to="/contact" className='nav-link text-white'>Contact us</Link></li>
-                        <li className="nav-item"><Link to="/location" className='nav-link text-white'>Our Location</Link></li>
-                        <li className="nav-item"><Link to="/gallery" className='nav-link text-white'>View Our Gallery</Link></li>
-                        <li className="nav-item"><Link to="/testimonials" className='nav-link text-white'>Testimonials</Link></li>
-                        <li className="nav-item"><Link to="/orderonline" className='nav-link text-white'>Order Online</Link></li>
-                        <li className="nav-item"><Link to="/reservations" className='nav-link text-white'>Make Reservations</Link></li>
                     </ul>
                 </div>
             </div>

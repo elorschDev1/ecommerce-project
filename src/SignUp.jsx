@@ -108,7 +108,7 @@ const SignUp = () => {
     const res=await fetch("https://edgarlorschmoviestore.rf.gd/test-cors.php",{
     method:"POST",
    // body:formData()
-   body:JSON.stringify(certainUser)
+   body:certainUser
    })
    const data=await res.text();
    console.log(data);

@@ -1,8 +1,9 @@
 import { Link,Outlet} from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import Footer from './Footer';
 import SearchBar from './SearchBar';
 import UserProvider from './context/UserProvider';

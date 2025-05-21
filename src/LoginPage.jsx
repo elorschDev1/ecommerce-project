@@ -75,15 +75,16 @@ const handlePasswordChange=(e)=>{
     
     formData.append("email",email);
      formData.append("password",password);
-    const res=await fetch("https://edgarlorschmoviestore.rf.gd/logindetails.php",{
+    const res=await fetch("http://localhost/ecommerce/logindetails.php",{
       method:"POST",
       body:formData,
     });
-   const  data=await res.json();
-   alert(data.message);
+   const  data=await res.text();
+   console.log(data);
+  /* console.log(data.message);
    console.log(data.email);
    console.log(data.message);
-   console.log(data.token);
+   console.log(data.token);*/
    if(data.message==="Login successful"){
     setLoggedIn(loggedIn=true);
     setCurrentUserEmail(currentUserEmail=email);

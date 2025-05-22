@@ -106,12 +106,12 @@ const SignUp = () => {
    
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
    // const res=await fetch("http://localhost/ecommerce/server.php",{
-   const res=await fetch("http://elorschmoviestore.onlinewebshop.net/server.php",{
-    method:"POST",
-    body:formData
-   })
-   const data=await res.text();
-   console.log(data);
+ const res=await fetch("http://elorschmoviestore.onlinewebshop.net/server.php",{
+  method:"POST",
+  body:formData
+ })
+ const data=await res.text();
+ console.log(data);
  
  if(data==="This email already exists in our systems."){
   alert("Head over to the login section to log into your account.");

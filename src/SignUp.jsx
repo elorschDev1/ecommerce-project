@@ -106,7 +106,7 @@ const SignUp = () => {
    
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
    // const res=await fetch("http://localhost/ecommerce/server.php",{
- const res=await fetch("http://elorschmoviestore.onlinewebshop.net/server.php",{
+ const res=await fetch("https://ecommerce-backend-4ooo.onrender.com/server.php",{
   method:"POST",
   body:formData
  })

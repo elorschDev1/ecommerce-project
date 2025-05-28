@@ -75,7 +75,7 @@ const handlePasswordChange=(e)=>{
     
     formData.append("email",email);
      formData.append("password",password);
-    const res=await fetch("https://ecommerce-backend-4ooo.onrender.com/server.php",{
+    const res=await fetch("https://ecommerce-backend-4ooo.onrender.com/logindetails.php",{
       method:"POST",
       body:formData,
     });

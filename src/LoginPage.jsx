@@ -82,7 +82,7 @@ const handlePasswordChange=(e)=>{
    const  data=await res.text();
    console.log(data);
    if(data.message==="Login successful"){
-    setLoggedIn(loggedIn=true);
+    setLoggedIn(true);
     setCurrentUserEmail(currentUserEmail=email);
     setTimeout(()=>{
       console.log(loggedIn);

@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import Footer from './Footer';
-import SearchBar from './SearchBar';
+import Footer from './components/Footer';
+import SearchBar from './components/SearchBar';
 import UserProvider from './context/UserProvider';
 import ButtonProvider from './context/ButtonProvider';
 import MovieProvider from './context/MovieProvider';

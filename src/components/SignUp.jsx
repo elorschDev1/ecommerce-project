@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState} from "react";
+import { useState,useContext} from "react";
 import {parsePhoneNumberFromString} from "libphonenumber-js";
 import PhoneInput from "react-phone-input-2";
 import 'react-phone-input-2/lib/style.css';
 import { useNavigate } from "react-router-dom";
+import ContactSuccessToast from './ContactSuccessToast';
+import ToastContext from '../context/ToastContext';
 const SignUp = () => {
   let navigate=useNavigate();
  const formData=new FormData();
@@ -24,6 +26,7 @@ const SignUp = () => {
   let passwordContainsLowercase=passwordValue.search(lowercaseLetterPattern)>=0;
   let passwordContainsUppercase=passwordValue.search(uppercaseLetterPattern)>=0;
   let passwordContainsDigit=passwordValue.search(digitPattern)>=0; 
+   let {triggerToast}=useContext(ToastContext);
  const handleNameChange=(e)=>{
     setnameValue(e.target.value);
     if(nameError!=="")setnameError("");
@@ -98,7 +101,6 @@ const SignUp = () => {
     setpasswordError("");
    }
    if(formIsValid){
-    alert("Great your details are in the correct format.");
    formData.append("name",nameValue);
    formData.append("email",emailValue);
    formData.append("phone",telephoneValue);
@@ -116,6 +118,7 @@ const SignUp = () => {
   alert("Head over to the login section to log into your account.");
   navigate("/login");
  }
+ triggerToast(`Hi there ${nameValue} you have successfully created an account here, welcome.`);
  setTimeout(()=>{
   setnameValue("");
   setemailValue("");
@@ -158,6 +161,7 @@ const SignUp = () => {
                      </div>
                      <Link to="/login">I have an account, take me to the login page</Link>
                       <button type="submit" className="btn btn-primary">Sign Up</button>
+        <ContactSuccessToast/>
           </form> 
           )
 }

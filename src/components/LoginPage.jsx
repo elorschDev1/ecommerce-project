@@ -4,11 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import ButtonContext from "../context/ButtonContext";
 import CartPageContext from "../context/CartPageContext";
+import ContactSuccessToast from './ContactSuccessToast';
+import ToastContext from '../context/ToastContext';
 const LoginPage = () => {
   // eslint-disable-next-line no-unused-vars
   let {loggedIn,setLoggedIn,currentUserEmail,setCurrentUserEmail}=useContext(UserContext);
   let {buttonClicked}=useContext(ButtonContext);
   let {cartIconClicked}=useContext(CartPageContext);
+    let {triggerToast}=useContext(ToastContext);
   const [email,setEmail]=useState("");
   let [emailError,setemailError]=useState("");
   const [password,setPassword]=useState("");
@@ -82,6 +85,7 @@ const handlePasswordChange=(e)=>{
    const  data=await res.json();
    console.log(data);
    if(data.message==="Login successful"){
+    triggerToast("You have successfully logged in to your account.");
     setLoggedIn(true);
     setCurrentUserEmail(currentUserEmail=email);
     setTimeout(()=>{
@@ -95,7 +99,7 @@ const handlePasswordChange=(e)=>{
     
    }
    if(data.message==="Login successful"&&cartIconClicked===true){
-    alert("Redirecting you to your selected products page.");
+    triggerToast(`Redirecting you to the selected products page.`);
     setTimeout(()=>{
       navigate("/cart");
     },1000)
@@ -123,6 +127,7 @@ const handlePasswordChange=(e)=>{
     <Link to="/account">Sign up</Link>
     <Link to="/forgotPassword">Forgot Your Password? Reset It Here</Link>
     <button  type="submit"  className="btn btn-primary">Login</button>
+   <ContactSuccessToast/>
   </form>
   )
 }

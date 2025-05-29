@@ -38,7 +38,7 @@ const Cart = () => {
 },[]);
 useEffect((e)=>{
   if(purchaseInitiated===true){
-   console.log(e.target.parentNode);
+   console.log(e.target.className);
   }
 },[purchaseInitiated]);
  

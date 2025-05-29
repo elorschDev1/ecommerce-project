@@ -38,9 +38,9 @@ const Cart = () => {
 },[]);
 useEffect((e)=>{
   if(purchaseInitiated===true){
-   console.log(e.target.className);
+   console.log(e.target.parentNode);
   }
-},[purchaseInitiated]);
+},[purchaseInitiated])
  
   return (
     <div className="p-3 m-3 d-flex flex-column justify-content-center align-items-center">

@@ -10,6 +10,7 @@ import UserProvider from './context/UserProvider';
 import ButtonProvider from './context/ButtonProvider';
 import MovieProvider from './context/MovieProvider';
 import CartPageProvider from './context/CartPageProvider';
+import ToastProvider from './context/ToastProvider';
 const App = () => {
   return (
 
@@ -17,6 +18,7 @@ const App = () => {
       <ButtonProvider>
         <MovieProvider>
           <CartPageProvider>
+            <ToastProvider>
     <div className="app">
       
          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -51,10 +53,12 @@ const App = () => {
       <Outlet/>
       <Footer/>
     </div>
+    </ToastProvider>
     </CartPageProvider>
     </MovieProvider>
     </ButtonProvider>
     </UserProvider>
+    
   )
 }
 export default App

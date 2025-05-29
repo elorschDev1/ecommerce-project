@@ -105,12 +105,11 @@ const SignUp = () => {
    formData.append("password",passwordValue);
    
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
-   // const res=await fetch("http://localhost/ecommerce/server.php",{
  const res=await fetch("https://ecommerce-backend-4ooo.onrender.com/server.php",{
   method:"POST",
   body:formData
  })
- const data=await res.text();
+ const data=await res.json();
  console.log(data);
  
  if(data==="This email already exists in our systems."){

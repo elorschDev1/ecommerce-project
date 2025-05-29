@@ -19,7 +19,7 @@ const Cart = () => {
   if(cartIconClicked&&loggedIn){
     formData.append("email",currentUserEmail)
     let sendEmailLogin=async()=>{
-      let res=await fetch("http://localhost/ecommerce/getUserMovies.php",{
+      let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/getUserMovies.php",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",

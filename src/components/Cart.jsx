@@ -2,13 +2,14 @@
 import React ,{useContext,useEffect,useState} from 'react';
 import { UserContext } from '../context/UserContext.js';
 import CartPageContext from '../context/CartPageContext.js';
+import PurchaseButtonContext from '../context/PurchaseButtonContext.js';
 import { useNavigate } from 'react-router-dom';
 import PurchaseButton from './PurchaseButton.jsx';
 import DeleteButton from './DeleteButton.jsx';
 const Cart = () => {
   let {loggedIn,currentUserEmail}=useContext(UserContext);
   let {cartIconClicked}=useContext(CartPageContext);
-  let {purchaseInitiated}=useContext(purchaseInitiated);
+  let {purchaseInitiated}=useContext(PurchaseButtonContext);
   let [movies,setMovies]=useState([]);
   let navigate=useNavigate();
   let formData=new FormData();

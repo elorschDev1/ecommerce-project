@@ -37,9 +37,9 @@ const Cart = () => {
   }
 
 },[]);
-useEffect((e)=>{
+useEffect(()=>{
   if(purchaseInitiated===true){
-   console.log(e.target.parentNode);
+   console.log("Purchase action taken");
   }
 },[purchaseInitiated])
  

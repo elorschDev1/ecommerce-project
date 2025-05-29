@@ -8,6 +8,7 @@ import DeleteButton from './DeleteButton.jsx';
 const Cart = () => {
   let {loggedIn,currentUserEmail}=useContext(UserContext);
   let {cartIconClicked}=useContext(CartPageContext);
+  let {purchaseInitiated}=useContext(purchaseInitiated);
   let [movies,setMovies]=useState([]);
   let navigate=useNavigate();
   let formData=new FormData();
@@ -35,6 +36,11 @@ const Cart = () => {
   }
 
 },[]);
+useEffect((e)=>{
+  if(purchaseInitiated===true){
+   console.log(e.target.parentNode);
+  }
+},[purchaseInitiated]);
  
   return (
     <div className="p-3 m-3 d-flex flex-column justify-content-center align-items-center">

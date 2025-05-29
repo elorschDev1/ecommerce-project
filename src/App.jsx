@@ -3,7 +3,6 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import UserProvider from './context/UserProvider';
@@ -11,6 +10,7 @@ import ButtonProvider from './context/ButtonProvider';
 import MovieProvider from './context/MovieProvider';
 import CartPageProvider from './context/CartPageProvider';
 import ToastProvider from './context/ToastProvider';
+import PurchaseButtonProvider from './context/PurchaseButtonProvider';
 const App = () => {
   return (
 
@@ -19,6 +19,7 @@ const App = () => {
         <MovieProvider>
           <CartPageProvider>
             <ToastProvider>
+              <PurchaseButtonProvider>
     <div className="app">
       
          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -53,6 +54,7 @@ const App = () => {
       <Outlet/>
       <Footer/>
     </div>
+    </PurchaseButtonProvider>
     </ToastProvider>
     </CartPageProvider>
     </MovieProvider>

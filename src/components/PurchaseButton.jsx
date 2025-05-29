@@ -1,10 +1,12 @@
-import 'react'
+import React,{useContext} from "react";
+import PurchaseButtonContext from "../context/PurchaseButtonContext";
 
 const PurchaseButton = () => {
+  let {setPurchaseInititiated}=useContext(PurchaseButtonContext);
   return (
-    <div>
-      <button className="bg-dark text-white">Purchase</button>
-    </div>
+    <>
+      <button className="bg-dark text-white" onClick={()=>setPurchaseInititiated(true)}>Purchase</button>
+    </>
   )
 }
 

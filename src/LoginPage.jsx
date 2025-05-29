@@ -79,7 +79,7 @@ const handlePasswordChange=(e)=>{
       method:"POST",
       body:formData,
     });
-   const  data=await res.text();
+   const  data=await res.json();
    console.log(data);
    if(data.message==="Login successful"){
     setLoggedIn(true);
@@ -87,7 +87,11 @@ const handlePasswordChange=(e)=>{
     setTimeout(()=>{
       console.log(loggedIn);
     },1500)
-    if(buttonClicked===true)navigate(-1);
+    if(buttonClicked===true){
+      navigate(-1);
+    }else{
+      navigate("/");
+    }
     
    }
    if(data.message==="Login successful"&&cartIconClicked===true){

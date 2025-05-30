@@ -37,9 +37,10 @@ const Cart = () => {
   }
 
 },[]);
+
 useEffect(()=>{
   if(purchaseInitiated===true){
-   console.log("Purchase action taken");
+    console.log("Purchase in process.");
   }
 },[purchaseInitiated])
  

@@ -13,13 +13,14 @@ import ToastProvider from './context/ToastProvider';
 import PurchaseButtonProvider from './context/PurchaseButtonProvider';
 const App = () => {
   return (
+    <PurchaseButtonProvider>
 
     <UserProvider>
       <ButtonProvider>
         <MovieProvider>
           <CartPageProvider>
             <ToastProvider>
-              <PurchaseButtonProvider>
+              
     <div className="app">
       
          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,13 +55,13 @@ const App = () => {
       <Outlet/>
       <Footer/>
     </div>
-    </PurchaseButtonProvider>
+  
     </ToastProvider>
     </CartPageProvider>
     </MovieProvider>
     </ButtonProvider>
     </UserProvider>
-    
+    </PurchaseButtonProvider>
   )
 }
 export default App

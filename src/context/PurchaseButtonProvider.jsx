@@ -4,7 +4,9 @@ import PurchaseButtonContext from './PurchaseButtonContext';
 import PropTypes from "prop-types";
 const PurchaseButtonProvider = ({children}) => {
     let [purchaseInitiated,setPurchaseInitiated]=useState(false);
-  return (<PurchaseButtonContext.Provider value={{purchaseInitiated,setPurchaseInitiated}}>{children}</PurchaseButtonContext.Provider> )
+    let [purchasedMovie,setPurchasedMovie]=useState("");
+    let [purchasedMoviePrice,setPurchasedMoviePrice]=useState(0);
+  return (<PurchaseButtonContext.Provider value={{purchaseInitiated,setPurchaseInitiated,purchasedMovie,setPurchasedMovie,purchasedMoviePrice,setPurchasedMoviePrice}}>{children}</PurchaseButtonContext.Provider> )
 }
 
 export default PurchaseButtonProvider

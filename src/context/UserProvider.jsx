@@ -6,8 +6,9 @@ import PropTypes from "prop-types";
 const UserProvider = ({children}) => {
     let [loggedIn,setLoggedIn]=useState(false);
     let [currentUserEmail,setCurrentUserEmail]=useState("")
+    let [registeredNumber,setRegisteredNumber]=useState("");
     
-  return (<UserContext.Provider value={{loggedIn,setLoggedIn,currentUserEmail,setCurrentUserEmail}}>{children}</UserContext.Provider>)
+  return (<UserContext.Provider value={{loggedIn,setLoggedIn,currentUserEmail,setCurrentUserEmail,registeredNumber,setRegisteredNumber}}>{children}</UserContext.Provider>)
 }
 
 export default UserProvider

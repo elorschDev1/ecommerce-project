@@ -1,12 +1,16 @@
+// eslint-disable-next-line no-unused-vars
 import React,{useContext} from "react";
 import PurchaseButtonContext from "../context/PurchaseButtonContext";
+import PropTypes from 'prop-types';
 
-const PurchaseButton = () => {
- let {setPurchaseInititiated,purchaseInitiated}=useContext(PurchaseButtonContext);
+const PurchaseButton = ({movieName,moviePrice}) => {
+   let {setPurchaseInitiated,setPurchasedMovie,setPurchasedMoviePrice}=useContext(PurchaseButtonContext);
   let handleClick=()=>{
-    setPurchaseInititiated(true);
+    setPurchaseInitiated(true);
      console.log("A purchase action has occured.");
-     console.log(purchaseInitiated);
+     setPurchasedMovie(movieName);
+     setPurchasedMoviePrice(moviePrice);
+     console.log(typeof moviePrice)
   }
   return (
     <>
@@ -16,3 +20,7 @@ const PurchaseButton = () => {
 }
 
 export default PurchaseButton
+PurchaseButton.propTypes={
+  movieName:PropTypes.string.isRequired,
+  moviePrice:PropTypes.string.isRequired
+}

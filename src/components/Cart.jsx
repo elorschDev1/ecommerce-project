@@ -6,11 +6,13 @@ import PurchaseButtonContext from '../context/PurchaseButtonContext.js';
 import { useNavigate } from 'react-router-dom';
 import PurchaseButton from './PurchaseButton.jsx';
 import DeleteButton from './DeleteButton.jsx';
+//import LoadingSpinner from './LoadingSpinner.jsx';
 const Cart = () => {
-  let {loggedIn,currentUserEmail}=useContext(UserContext);
+  let {loggedIn,currentUserEmail,registeredNumber,setRegisteredNumber}=useContext(UserContext);
   let {cartIconClicked}=useContext(CartPageContext);
-  let {purchaseInitiated}=useContext(PurchaseButtonContext);
+  let {purchaseInitiated,purchasedMovie,purchasedMoviePrice}=useContext(PurchaseButtonContext);
   let [movies,setMovies]=useState([]);
+ // let [loading,setLoading]=useState(false);
   let navigate=useNavigate();
   let formData=new FormData();
   useEffect(()=>{
@@ -34,19 +36,52 @@ const Cart = () => {
      setMovies([...data]);
     }
     sendEmailLogin();
+
+    let getPhoneNumber=async()=>{
+      let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/clientcontact.php",{
+        method:"POST",
+          headers:{
+          "Content-Type":"application/json",
+          //This header will tell the server the format of the request body
+        },
+        body:JSON.stringify(currentUserEmail)
+      })
+      let data=await res.text();
+      let parsedData=JSON.parse(data);
+      let obtainedNumber=Math.abs(parsedData[0].client_phonenumber);
+      setRegisteredNumber(obtainedNumber);
+    }
+    getPhoneNumber();
+
   }
 
 },[]);
 
 useEffect(()=>{
   if(purchaseInitiated===true){
-    console.log("Purchase in process.");
+    let purchaseAction=async()=>{
+      let formData=new FormData();
+      formData.append("purchasedMovie",purchasedMovie);
+      formData.append("purchasedMoviePrice",Math.abs(purchasedMoviePrice));
+      formData.append("currentUserEmail",currentUserEmail);
+      formData.append("registeredNumber",registeredNumber);
+      let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/purchasehandler.php",{
+        method:"POST",
+        body:formData
+      })
+      let data=await res.json();
+      console.log(data);
+      console.log(purchasedMovie);
+      console.log(registeredNumber);
+    }
+    purchaseAction()
   }
 },[purchaseInitiated])
  
   return (
     <div className="p-3 m-3 d-flex flex-column justify-content-center align-items-center">
       <h3 className='text-white text-center'>Your Movie Selection List:</h3>
+    
       <table className='table table-success p-1 m-2 w-25'>
         <thead>
           <tr>
@@ -65,7 +100,7 @@ useEffect(()=>{
             <td><img src={movie.image} className='img-fluid'/></td>
             <td>{movie.price}</td>
             <td>{movie.category}</td>
-            <td><PurchaseButton/></td>
+            <td><PurchaseButton movieName={movie.name} moviePrice={movie.price}/></td>
             <td><DeleteButton/></td>
           </tr>
          ))} 

@@ -107,7 +107,7 @@ const SignUp = () => {
    formData.append("password",passwordValue);
    
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
- const res=await fetch("https://ecommerce-backend-4ooo.onrender.com/server.php",{
+ const res=await fetch("https://inkhorn.co.ke/server.php",{
   method:"POST",
   body:formData
  })

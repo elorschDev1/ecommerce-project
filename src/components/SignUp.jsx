@@ -107,11 +107,12 @@ const SignUp = () => {
    formData.append("password",passwordValue);
    
    if(boxChecked===true)formData.append("approve-emails",boxChecked);
- const res=await fetch("https://inkhorn.co.ke/server.php",{
+   try{
+     const res=await fetch("https://inkhorn.co.ke/server.php",{
   method:"POST",
   body:formData
  })
- const data=await res.json();
+ const data=await res.text();
  console.log(data);
  
  if(data==="This email already exists in our systems."){
@@ -126,7 +127,12 @@ const SignUp = () => {
   setpasswordValue("");
   if(boxChecked===true)setBoxChecked(false);
  },1200);
-} 
+} catch(err){
+  console.log(err);
+}
+     
+   }
+
   }
   return (
     <form noValidate onSubmit={handleSubmit}>

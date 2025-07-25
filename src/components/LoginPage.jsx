@@ -33,7 +33,7 @@ const handlePasswordChange=(e)=>{
   setPassword(e.target.value.trim());
   if(passwordError!=="")setpasswordError("");
 }
-  const handleSubmit= async (e)=>{
+  const handleSubmit=async (e)=>{
     e.preventDefault();
     setFormSuccess("");
     let formIsValid=true;
@@ -78,11 +78,13 @@ const handlePasswordChange=(e)=>{
     
     formData.append("email",email);
      formData.append("password",password);
-    const res=await fetch("https://ecommerce-backend-4ooo.onrender.com/logindetails.php",{
+    try {
+           
+    const res=await fetch("https://inkhorn.co.ke/logindetails.php",{
       method:"POST",
       body:formData,
     });
-   const  data=await res.json();
+   const  data=await res.text();
    console.log(data);
    if(data.message==="Login successful"){
     triggerToast("You have successfully logged in to your account.");
@@ -107,6 +109,10 @@ const handlePasswordChange=(e)=>{
    }
    if(data.message==="Passwords do not match")console.log("Reset password");
    if(data.message==="No user found with this email address,sign up to create an account.")navigate("/signup");
+      
+    } catch (error) {
+      console.log(error);
+    }
   } 
   }
   

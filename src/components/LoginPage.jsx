@@ -84,7 +84,7 @@ const handlePasswordChange=(e)=>{
       method:"POST",
       body:formData,
     });
-   const  data=await res.text();
+   const  data=await res.json();
    console.log(data);
    if(data.message==="Login successful"){
     triggerToast("You have successfully logged in to your account.");
@@ -108,7 +108,7 @@ const handlePasswordChange=(e)=>{
   
    }
    if(data.message==="Passwords do not match")console.log("Reset password");
-   if(data.message==="No user found with this email address,sign up to create an account.")navigate("/signup");
+   if(data.message==="No user found with this email address,sign up to create an account.")navigate("/signup")
       
     } catch (error) {
       console.log(error);

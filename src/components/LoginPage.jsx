@@ -108,7 +108,7 @@ const handlePasswordChange=(e)=>{
   
    }
    if(data.message==="Passwords do not match")console.log("Reset password");
-   if(data.message==="No user found with this email address,sign up to create an account.")navigate("/signup")
+   if(data.message=="No user has been found with this email address, sign up to create an account.")navigate("/signup")
       
     } catch (error) {
       console.log(error);

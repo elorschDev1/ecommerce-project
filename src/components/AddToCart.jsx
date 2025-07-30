@@ -32,7 +32,7 @@ useEffect(()=>{
 },[addOccured]);
  
   const sendMovieData=async()=>{
-    let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/usermovies.php",{
+    let res=await fetch("https://inkhorn.co.ke/usermovies.php",{
       method:"POST",
       headers:{
         "Content-Type":"application/json",

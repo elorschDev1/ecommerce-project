@@ -14,7 +14,7 @@ let moviesCopy=[...selectedMovies];
 console.log(moviesCopy);
 
   const handleClick=(e)=>{
-  setButtonClicked(buttonClicked=true);
+  setButtonClicked(true);
   if(buttonClicked===true&&loggedIn===false)navigate('/login');
  if(loggedIn===true&&buttonClicked===true){
  addMovie(e.target.parentNode.className);

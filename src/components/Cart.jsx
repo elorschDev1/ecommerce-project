@@ -2,7 +2,7 @@
 import React ,{useContext,useEffect,useState} from 'react';
 import { UserContext } from '../context/UserContext.js';
 import CartPageContext from '../context/CartPageContext.js';
-import PurchaseButtonContext from '../context/PurchaseButtonContext.js';
+//import PurchaseButtonContext from '../context/PurchaseButtonContext.js';
 import { useNavigate } from 'react-router-dom';
 import PurchaseButton from './PurchaseButton.jsx';
 import DeleteButton from './DeleteButton.jsx';
@@ -10,7 +10,7 @@ import DeleteButton from './DeleteButton.jsx';
 const Cart = () => {
   let {loggedIn,currentUserEmail,registeredNumber,setRegisteredNumber}=useContext(UserContext);
   let {cartIconClicked}=useContext(CartPageContext);
-  let {purchaseInitiated,purchasedMovie,purchasedMoviePrice}=useContext(PurchaseButtonContext);
+  //let {purchaseInitiated,purchasedMovie,purchasedMoviePrice}=useContext(PurchaseButtonContext);
   let [movies,setMovies]=useState([]);
  // let [loading,setLoading]=useState(false);
   let navigate=useNavigate();
@@ -22,23 +22,23 @@ const Cart = () => {
   }
   if(cartIconClicked&&loggedIn){
     formData.append("email",currentUserEmail)
-    let sendEmailLogin=async()=>{
-      let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/getUserMovies.php",{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json",
-          //This header will tell the server the format of the request body
-        },
-        body:JSON.stringify(currentUserEmail)
-       //body:JSON.stringify(formData)
-      })
-      let data=await res.json();
-     setMovies([...data]);
+    const sendEmailLogin=async()=>{
+      try {
+        let res=await fetch("https://inkhorn.co.ke/getUserMovies.php",{
+          method:"POST",
+          body:formData
+        });
+        let data=await res.json();
+        setMovies([...data]);  
+      } catch (error) {
+        console.log(error);
+      }
     }
     sendEmailLogin();
 
-    let getPhoneNumber=async()=>{
-      let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/clientcontact.php",{
+    const getPhoneNumber=async()=>{
+      try {
+          let res=await fetch("https://inkhorn.co.ke/clientcontact.php",{
         method:"POST",
           headers:{
           "Content-Type":"application/json",
@@ -49,35 +49,15 @@ const Cart = () => {
       let data=await res.text();
       let parsedData=JSON.parse(data);
       let obtainedNumber=Math.abs(parsedData[0].client_phonenumber);
-      setRegisteredNumber(obtainedNumber);
+      setRegisteredNumber(obtainedNumber);    
+      } catch (error) {
+        console.log(error);
+      }
     }
-    getPhoneNumber();
-
+    getPhoneNumber()
   }
-
 },[]);
 
-useEffect(()=>{
-  if(purchaseInitiated===true){
-    let purchaseAction=async()=>{
-      let formData=new FormData();
-      formData.append("purchasedMovie",purchasedMovie);
-      formData.append("purchasedMoviePrice",Math.abs(purchasedMoviePrice));
-      formData.append("currentUserEmail",currentUserEmail);
-      formData.append("registeredNumber",registeredNumber);
-      let res=await fetch("https://ecommerce-backend-4ooo.onrender.com/purchasehandler.php",{
-        method:"POST",
-        body:formData
-      })
-      let data=await res.json();
-      console.log(data);
-      console.log(purchasedMovie);
-      console.log(registeredNumber);
-    }
-    purchaseAction()
-  }
-},[purchaseInitiated])
- 
   return (
     <div className="p-3 m-3 d-flex flex-column justify-content-center align-items-center">
       <h3 className='text-white text-center'>Your Movie Selection List:</h3>
@@ -100,7 +80,7 @@ useEffect(()=>{
             <td><img src={movie.image} className='img-fluid'/></td>
             <td>{movie.price}</td>
             <td>{movie.category}</td>
-            <td><PurchaseButton movieName={movie.name} moviePrice={movie.price}/></td>
+            <td><PurchaseButton movieName={movie.name} moviePrice={movie.price} registeredNumber={registeredNumber}/></td>
             <td><DeleteButton/></td>
           </tr>
          ))} 

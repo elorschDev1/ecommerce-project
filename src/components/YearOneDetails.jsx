@@ -1,47 +1,35 @@
-
 import AddToCart from "./AddToCart";
+import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 const YearOneDetails = () => {
   return (
     <>
-    <div id="yearOneSlides" className="carousel slide d-flex justify-content-center align-items-center flex-column" data-bs-ride="carousel">
-    <div className="carousel-indicators">
-    <button type="button" data-bs-target="#yearOneSlides" data-bs-slide-to="0" className="active"></button>
-    <button type="button" data-bs-target="#yearOneSlides" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#yearOneSlides" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#yearOneSlides" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#yearOneSlides" data-bs-slide-to="4"></button>
-    </div>
-    <div className="carousel-inner w-50">
-    <div className="carousel-item active">
-    <img src="year1.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="yearOne.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="year3.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="year4.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="year5.jpg" className="d-block w-100"/>
-    </div>
-    </div>
-    <button className="carousel-control-prev" type="button" data-bs-target="#yearOneSlides" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon"></span>
-    </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#yearOneSlides" data-bs-slide="next">
-    <span className="carousel-control-next-icon"></span>
-    </button>
-    </div>
-    <div className="d-flex flex-column justify-content-center align-items-center text-white">
-     <div className="w-50">
-    <h1>Movie Description</h1>
-    <p>After Neanderthal hunter Zed (Jack Black) is exiled for eating the forbidden fruit, he and his sardonic buddy Oh (Micheal Cera) leave their village and begin an epic journey through history. The pals encounter biblical characters suchas cain (David Cross) and Abel, Abraham (Hank Azaria), and others, and wind up in Sodom. Along the way, Zed debunks common beliefs and replaces them with his own delusions of grandeur.</p>
-    </div> 
-    <div className="Year One"><AddToCart/></div>
-    </div>
+     <div className='d-flex flex-column justify-content-center align-items-center p-4 m-4'>
+            <Card className='w-100'>
+              <Carousel>
+                <Carousel.Item interval={1000}>
+                  <img src="year1.jpg" alt="Image from the Year One Series"  className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                  <Carousel.Item>
+                  <img src="yearOne.jpg" alt="Image from the Year One Series"  className='w-100 h-100 d-block' />
+                </Carousel.Item >
+                  <Carousel.Item interval={1000}>
+                  <img src="year3.jpg" alt="Image from the Year One Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="year4.jpg" alt="Image from the Year One Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="year5.jpg" alt="Image from the Year One Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+              </Carousel>
+              <Card.Body className='d-flex flex-column'>
+              <Card.Title>Movie Description</Card.Title>
+                   <Card.Text>After Neanderthal hunter Zed (Jack Black) is exiled for eating the forbidden fruit, he and his sardonic buddy Oh (Micheal Cera) leave their village and begin an epic journey through history. The pals encounter biblical characters suchas cain (David Cross) and Abel, Abraham (Hank Azaria), and others, and wind up in Sodom. Along the way, Zed debunks common beliefs and replaces them with his own delusions of grandeur.</Card.Text>
+                          <div className="d-flex flex-column justify-content-center align-items-center">  <div className="Year One"><AddToCart/></div> </div>
+                        </Card.Body>
+            </Card>
+            </div>
    
     </>
   )

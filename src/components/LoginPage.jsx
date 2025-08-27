@@ -107,7 +107,11 @@ const handlePasswordChange=(e)=>{
     },1000)
   
    }
-   if(data.message==="Passwords do not match")console.log("Reset password");
+   if(data.message==="Passwords do not match."){
+    alert("Wrong password for this account,we suggest you reset your password:");
+    let resetPassword=confirm("Do you want to reset your password?");
+    if(resetPassword)navigate("/forgotPassword");
+   }
    if(data.message=="No user has been found with this email address, sign up to create an account.")navigate("/signup")
       
     } catch (error) {
@@ -117,24 +121,30 @@ const handlePasswordChange=(e)=>{
   }
   
   return (
-    <form id="loginForm" noValidate role="form" onSubmit={handleSubmit} className="container-fluid">
+    <section className="d-flex flex-column justify-content-center align-items-center p-3 m-4">
+    <form id="loginForm" noValidate role="form" onSubmit={handleSubmit} className="form d-flex justify-content-center align-items-center flex-column">
       <h4 className="text-white text-center">Login Here:</h4>
-      <div className="mb-3">
+      <div className="mb-3 p-2">
       <label htmlFor="loginEmail" className="form-label">Enter Your Email Address Here:</label>
-      <input type="email" id="loginEmail" name="loginEmail"  className="form-control" value={email} onChange={handleEmailChange}/>
+      <input type="email" id="loginEmail" name="loginEmail"  className="form-control  p-3 rounded-2 m-1" value={email} onChange={handleEmailChange}/>
       <p className="text-danger">{emailError}</p>
       </div>
-     <div className="mb-3">
+     <div className="mb-3 p-2">
      <label htmlFor="loginpassword" className="form-label">Enter Your Password:</label>
-    <input type="password" id="loginpassword" name="loginpassword"  className="form-control" value={password} onChange={handlePasswordChange}/>
+    <input type="password" id="loginpassword" name="loginpassword"  className="form-control  p-3 rounded-2 m-1" value={password} onChange={handlePasswordChange}/>
     <p className="text-danger">{passwordError}</p>
      </div>
-     <div className="mb-3"><p></p></div>
-    <Link to="/account">Sign up</Link>
+     <div className="mb-5 p-2 d-flex flex-column justify-content-center align-items-center">
+      <Link to="/account">Sign up</Link>
     <Link to="/forgotPassword">Forgot Your Password? Reset It Here</Link>
-    <button  type="submit"  className="btn btn-primary">Login</button>
+       <button  type="submit"  className="btn btn-primary">Login</button>
+    
+     </div>
+    
+ 
    <ContactSuccessToast/>
   </form>
+  </section>
   )
 }
 export default LoginPage

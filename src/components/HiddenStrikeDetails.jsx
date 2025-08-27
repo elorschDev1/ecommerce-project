@@ -1,46 +1,35 @@
 import AddToCart from "./AddToCart";
+import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 const HiddenStrikeDetails = () => {
   return (
     <>
-        <div id="hiddenStrikeSlides" className="carousel slide d-flex flex-column justify-content-center align-items-center" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-        <button type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide-to="0" className="active"></button>
-        <button type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide-to="4"></button>
-        </div>
-        <div className="carousel-inner w-50">
-        <div className="carousel-item active">
-        <img src="hidden1.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="hidden2.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="hidden3.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="hidden4.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="hidden5.jpg" className="d-block w-100"/>
-        </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon"></span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#hiddenStrikeSlides" data-bs-slide="next">
-        <span className="carousel-control-next-icon"></span>
-        </button>
-        </div>
-        <div className="d-flex justify-content-center align-items-center flex-column">
-           <div className="w-50 text-white">
-        <h1>Movie Description</h1>
-        <p>Two former soldiers face non-stop danger as they travel along one of the most dangerous roads in the world.</p>   
-        </div>
-        <div className="Hidden Strike"> <AddToCart/></div>
-        </div>
+         <div className='d-flex flex-column justify-content-center align-items-center p-4 m-4'>
+            <Card className='w-100'>
+              <Carousel>
+                <Carousel.Item interval={1000}>
+                  <img src="hidden1.jpg" alt="Image from the Hidden Strike Series"  className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                  <Carousel.Item>
+                  <img src="hidden2.jpg" alt="Image from the Hidden Strike Series"  className='w-100 h-100 d-block' />
+                </Carousel.Item >
+                  <Carousel.Item interval={1000}>
+                  <img src="hidden3.jpg" alt="Image from the Hidden Strike Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="hidden4.jpg" alt="Image from the Hidden Strike Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="hidden5.jpg" alt="Image from the Hidden Strike Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+              </Carousel>
+              <Card.Body className='d-flex flex-column'>
+              <Card.Title>Movie Description</Card.Title>
+                   <Card.Text>Two former soldiers face non-stop danger as they travel along one of the most dangerous roads in the world.</Card.Text>
+                          <div className="d-flex flex-column justify-content-center align-items-center"> <div className="Hidden Strike"> <AddToCart/></div></div>
+                        </Card.Body>
+            </Card>
+            </div>
         </>
   )
 }

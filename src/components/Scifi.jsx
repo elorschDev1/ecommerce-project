@@ -7,15 +7,13 @@ import EdgeOfTomorrow from "./EdgeOfTomorrow";
 const Scifi = () => {
   return (
     <>
-    <div className="row">
-    <Inception/>
-    <ExMachina/>
-    <Arrival/>
-    </div>
-    <div className="row">
-    <Her/>
-    <Matrix/>
-    <EdgeOfTomorrow/>
+    <div className="container">
+       <Inception/>
+       <ExMachina/>
+       <Arrival/>
+       <Her/>
+      <Matrix/>
+      <EdgeOfTomorrow/> 
     </div>
     </>
   )

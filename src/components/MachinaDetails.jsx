@@ -1,46 +1,38 @@
 import AddToCart from "./AddToCart";
+import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 const MachinaDetails = () => {
   return (
     <>
-    <div id="machinaSlides" className="carousel slide d-flex flex-column justify-content-center align-items-center mt-4" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-        <button type="button" data-bs-target="#machinaSlides" data-bs-slide-to="0" className="active"></button>
-        <button type="button" data-bs-target="#machinaSlides" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#machinaSlides" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#machinaSlides" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#machinaSlides" data-bs-slide-to="4"></button>
-        </div>
-        <div className="carousel-inner w-75">
-        <div className="carousel-item active">
-        <img src="machina1.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="machina2.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="machina3.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="machina4.jpg" className="d-block w-100"/>
-        </div>
-         <div className="carousel-item">
-        <img src="machina5.jpg" className="d-block w-100"/>
-        </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#machinaSlides" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon"></span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#machinaSlides" data-bs-slide="next">
-        <span className="carousel-control-next-icon"></span>
-        </button>
-        </div>
-        <div className="d-flex flex-column justify-content-center align-items-center">
-            <div className="w-75 text-white">
-        <h1>Movie Description</h1>
-        <p>Caleb Smith (Domhnall Gleeson) a programmer at a hige internet company, wins a contest that enables him to spend a week at the private estate of Nathan.</p> 
-         </div>
-         <div className="Ex Machina"> <AddToCart/></div>
-         </div>
+            <div className='d-flex flex-column justify-content-center align-items-center p-4 m-4'>
+            <Card className='w-100'>
+              <Carousel>
+                <Carousel.Item interval={1000}>
+                  <img src="machina1.jpg" alt="Image from the Ex Machina series"  className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                  <Carousel.Item>
+                  <img src="machina2.jpg" alt="Image from the Ex Machina series"  className='w-100 h-100 d-block' />
+                </Carousel.Item >
+                  <Carousel.Item interval={1000}>
+                  <img src="machina3.jpg" alt="Image from the Ex Machina series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="machina4.jpg" alt="Image from the Ex Machina series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="machina5.jpg" alt="Image from the Ex Machina series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+              </Carousel>
+              <Card.Body className='d-flex flex-column'>
+              <Card.Title>Movie Description</Card.Title>
+                          <Card.Text>Caleb Smith (Domhnall Gleeson) a programmer at a huge internet company, wins a contest that enables him to spend a week at the private estate of Nathan</Card.Text>
+                          <div className="d-flex flex-column justify-content-center align-items-center">
+                                 <div className="Ex Machina"> <AddToCart/></div>
+                          </div>
+                        </Card.Body>
+        
+            </Card>
+            </div>
          </>
   )
 }

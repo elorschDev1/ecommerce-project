@@ -7,12 +7,10 @@ import Abigail from './Abigail';
 const Horror = () => {
   return (
     <>
-    <div className="row">
-<TheWatchers/>
-<QuietPlace/>
-<Immaculate/>
-</div>
-    <div className="row">
+    <div className="container">
+     <TheWatchers/>
+     <QuietPlace/>
+      <Immaculate/>
       <Arcadian/>
       <Sting/>
       <Abigail/>

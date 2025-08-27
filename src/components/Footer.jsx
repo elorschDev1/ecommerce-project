@@ -8,7 +8,7 @@ const Footer = () => {
     setCartIconClicked(true);
   }
   return (
-    <div className='footer'>
+    <div className='footer mt-3'>
    <Link to="/" className='nav-link'><i className='bi-house'></i></Link>
     <Link to="/cart" className='nav-link' onClick={handleClick}><i className='bi-cart' ></i></Link>
     <Link to="/account" className='nav-link'><i className="bi-person"></i></Link>

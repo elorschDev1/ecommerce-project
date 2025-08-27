@@ -1,48 +1,37 @@
-import AddToCart from "./AddToCart"
+import AddToCart from "./AddToCart";
+import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 
 /* eslint-disable react/no-unescaped-entities */
 const TheChangeUpDetails = () => {
   return (
     <>
-    <div id="changeUpSlides" className="carousel slide d-flex flex-column justify-content-center align-items-center" data-bs-ride="carousel">
-    <div className="carousel-indicators">
-    <button type="button" data-bs-target="#changeUpSlides" data-bs-slide-to="0" className="active"></button>
-    <button type="button" data-bs-target="#changeUpSlides" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#changeUpSlides" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#changeUpSlides" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#changeUpSlides" data-bs-slide-to="4"></button>
-    </div>
-    <div className="carousel-inner w-50">
-    <div className="carousel-item active">
-    <img src="changeUp1.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="changeUp2.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="changeUp3.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="changeUp4.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="theChangeUp.jpg" className="d-block w-100"/>
-    </div>
-    </div>
-    <button className="carousel-control-prev" type="button" data-bs-target="#changeUpSlides" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon"></span>
-    </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#changeUpSlides" data-bs-slide="next">
-    <span className="carousel-control-next-icon"></span>
-    </button>
-    </div>
-    <div className="d-flex flex-column justify-content-center align-items-center text-white">
-     <div className="w-50">
-    <h1>Movie Description</h1>
-    <p>The film stars Ryan Reynolds and Jason Bateman as Mitch Planko and dave Lockwood, two best friends living in Atlanta who "switch bodies" after urinating...</p>
-    </div>
-    <div className="The Change Up"><AddToCart/></div>
-    </div>
+       <div className='d-flex flex-column justify-content-center align-items-center p-4 m-4'>
+            <Card className='w-100'>
+              <Carousel>
+                <Carousel.Item interval={1000}>
+                  <img src="changeUp1.jpg" alt="Image from The Change Up Series"  className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                  <Carousel.Item>
+                  <img src="changeUp2.jpg" alt="Image from The Change Up Series"  className='w-100 h-100 d-block' />
+                </Carousel.Item >
+                  <Carousel.Item interval={1000}>
+                  <img src="changeUp3.jpg" alt="Image from The Change Up Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="changeUp4.jpg" alt="Image from The Change Up Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+                 <Carousel.Item interval={1000}>
+                  <img src="theChangeUp.jpg" alt="Image from The Change Up Series" className='w-100 h-100 d-block' />
+                </Carousel.Item>
+              </Carousel>
+              <Card.Body className='d-flex flex-column'>
+              <Card.Title>Movie Description</Card.Title>
+                   <Card.Text>The film stars Ryan Reynolds and Jason Bateman as Mitch Planko and dave Lockwood, two best friends living in Atlanta who "switch bodies" after urinating...</Card.Text>
+                          <div className="d-flex flex-column justify-content-center align-items-center">  <div className="The Change Up"><AddToCart/></div></div>
+                        </Card.Body>
+            </Card>
+            </div>
     </>
   )
 }

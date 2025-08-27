@@ -14,10 +14,10 @@ const PurchaseButton = ({movieName,moviePrice,registeredNumber}) => {
      let formData=new FormData();
      formData.append("movieName",movieName);
      formData.append("moviePrice",moviePrice);
-     formData.append("registeredNumber",registeredNumber);
+     formData.append("registeredNumber",Math.abs(registeredNumber));
      const sendPurchaseDetails=async()=>{
       try {
-        let res=await fetch("http://inkhorn.co.ke/expressStkPush.php",{
+        let res=await fetch("https://inkhorn.co.ke/express-stk.php",{
           method:"POST",
           body:formData
         });
@@ -41,5 +41,5 @@ export default PurchaseButton
 PurchaseButton.propTypes={
   movieName:PropTypes.string.isRequired,
   moviePrice:PropTypes.number.isRequired,
-  registeredNumber:PropTypes.number.isRequired
+  registeredNumber:PropTypes.string.isRequired
 }

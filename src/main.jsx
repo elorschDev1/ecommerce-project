@@ -42,6 +42,9 @@ import ImmaculateDetails from './components/ImmaculateDetails.jsx';
 import ArcadianDetails from './components/ArcadianDetails.jsx';
 import StingDetails from './components/StingDetails.jsx';
 import AbigailDetails from './components/AbigailDetails.jsx';
+import ForgotPassword from './components/ForgotPassword.jsx';
+import SecurityResponseConfirmation from './components/SecurityResponseConfirmation.jsx';
+import ResetPassword from './components/ResetPassword.jsx';
 const router=createBrowserRouter([
   {
     path:"/",
@@ -206,6 +209,18 @@ const router=createBrowserRouter([
       {
         path:"/abigailDetails",
         element:<AbigailDetails/>
+      },
+      {
+        path:"/forgotPassword",
+        element:<ForgotPassword/>
+      },
+      {
+        path:"/responseConfirmation",
+        element:<SecurityResponseConfirmation/>
+      },
+      {
+        path:"/resetPassword",
+        element:<ResetPassword/>
       }
     ]
   }

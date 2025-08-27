@@ -7,15 +7,13 @@ import Upgraded from "./Upgraded";
 const Comedy = () => {
   return (
     <>
-    <div className="row">
+    <div className="container">
       <TheChangeUp/>
       <TheOtherGuys/>
       <GrownUps/>
-     </div>
-    <div className="row">
-     <FamilyAffair/>
-     <Lift/>
-     <Upgraded/>
+      <FamilyAffair/>
+      <Lift/>
+      <Upgraded/>
     </div> 
     </>
   )

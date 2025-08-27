@@ -135,40 +135,47 @@ const SignUp = () => {
 
   }
   return (
-    <form noValidate onSubmit={handleSubmit}>
+    <section className="d-flex flex-column justify-content-center align-items-center  p-3">
+    <form noValidate onSubmit={handleSubmit} className="form d-flex justify-content-center align-items-center flex-column ">
       <h2 className="text-white text-center">Sign Up Here:</h2>
-    <div className="mb-3">
-                      <label htmlFor="username" className="form-label">Enter Your Name Here:</label>
-                                  <input type="text" id="username" name="username" className="form-control" value={nameValue} onChange={handleNameChange} autoComplete="name"/>
+    <div className="mb-1 p-2">
+                      <label htmlFor="username" className="form-label">Name:</label>
+                                  <input type="text" id="username" name="username" className="form-control p-3 rounded-2" value={nameValue} onChange={handleNameChange} autoComplete="name"/>
                       <p className="text-danger">{nameError}</p> 
                       </div>
-                      <div className="mb-3">
-                      <label  htmlFor="userphone" className="form-label" >Enter Your Telephone Number Here:</label>
+                      <div className="mb-1 p-2">
+                      <label  htmlFor="userphone" className="form-label" >Telephone Number:</label>
                       <PhoneInput  name='userphone' id="userphone" autoComplete="tel" onlyCountries={["ke","tz","ug","rw","bi","ss","et","so","us","gb","de","ae"]} value={telephoneValue} onChange={(value)=>{settelephoneValue(value)
                         if(telephoneError!=="")setTelephoneError("");
                       }} className="form-control"/>
                       <p className="text-danger">{telephoneError}</p>
                       </div>
-                      <div className="mb-3">
-                      <label htmlFor="userEmailAddress" className="form-label">Enter Your Email Address Here:</label>
-                      <input type="email" id="userEmailAddress" name="userEmailAddress"  autoComplete="email" className="form-control" value={emailValue} onChange={handleEmailChange}/>
+                      <div className="mb-1 p-2">
+                      <label htmlFor="userEmailAddress" className="form-label">Email Address:</label>
+                      <input type="email" id="userEmailAddress" name="userEmailAddress"  autoComplete="email" className="form-control  p-3 rounded-2" value={emailValue} onChange={handleEmailChange}/>
                       <p className="text-danger">{emailError}</p>
                       </div>
-                      <div className="mb-3">
-                      <label htmlFor="userpassword" className="form-label">Enter Your Password:</label>
-                     <input type="password" className="form-control" id="userpassword"  autoComplete="new-password" name="userpassword" value={passwordValue} onChange={handlePasswordChange}/>
+                      <div className="mb-1 p-2">
+                      <label htmlFor="userpassword" className="form-label">Enter Password:</label>
+                     <input type="password" className="form-control  p-3 rounded-2" id="userpassword"  autoComplete="new-password" name="userpassword" value={passwordValue} onChange={handlePasswordChange}/>
                      <p className="text-danger">{passwordError}</p>
                      </div>
-                     <div className="mb-3">
+                     <div className="mb-1 p-2">
                      <label className="form-check-label">
                 <input type="checkbox" name="notification-allowed" checked={boxChecked} onChange={handleCheckBoxChange} className="form-check-input"/>
                           Subscribe To Receive Emails.
                       </label>
                      </div>
-                     <Link to="/login">I have an account, take me to the login page</Link>
-                      <button type="submit" className="btn btn-primary">Sign Up</button>
+                     <div className="mb-2 p-2">
+                       <Link to="/login">I have an account, take me to the login page</Link>
+                     </div>
+                    <div className="mb-2 p-1">
+                       <button type="submit" className="btn btn-primary">Sign Up</button>
+                    </div>
+                     
         <ContactSuccessToast/>
           </form> 
+          </section>
           )
 }
 export default SignUp

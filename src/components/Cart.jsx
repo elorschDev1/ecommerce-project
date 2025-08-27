@@ -2,17 +2,13 @@
 import React ,{useContext,useEffect,useState} from 'react';
 import { UserContext } from '../context/UserContext.js';
 import CartPageContext from '../context/CartPageContext.js';
-//import PurchaseButtonContext from '../context/PurchaseButtonContext.js';
 import { useNavigate } from 'react-router-dom';
 import PurchaseButton from './PurchaseButton.jsx';
 import DeleteButton from './DeleteButton.jsx';
-//import LoadingSpinner from './LoadingSpinner.jsx';
 const Cart = () => {
   let {loggedIn,currentUserEmail,registeredNumber,setRegisteredNumber}=useContext(UserContext);
   let {cartIconClicked}=useContext(CartPageContext);
-  //let {purchaseInitiated,purchasedMovie,purchasedMoviePrice}=useContext(PurchaseButtonContext);
   let [movies,setMovies]=useState([]);
- // let [loading,setLoading]=useState(false);
   let navigate=useNavigate();
   let formData=new FormData();
   useEffect(()=>{
@@ -48,7 +44,7 @@ const Cart = () => {
       })
       let data=await res.text();
       let parsedData=JSON.parse(data);
-      let obtainedNumber=Math.abs(parsedData[0].client_phonenumber);
+      let obtainedNumber=parsedData[0].client_phonenumber;
       setRegisteredNumber(obtainedNumber);    
       } catch (error) {
         console.log(error);
@@ -58,8 +54,10 @@ const Cart = () => {
   }
 },[]);
 
+
+
   return (
-    <div className="p-3 m-3 d-flex flex-column justify-content-center align-items-center">
+    <div className="p-3 m-3 d-flex flex-column justify-content-center align-items-center table-responsive">
       <h3 className='text-white text-center'>Your Movie Selection List:</h3>
     
       <table className='table table-success p-1 m-2 w-25'>
@@ -81,7 +79,7 @@ const Cart = () => {
             <td>{movie.price}</td>
             <td>{movie.category}</td>
             <td><PurchaseButton movieName={movie.name} moviePrice={movie.price} registeredNumber={registeredNumber}/></td>
-            <td><DeleteButton/></td>
+            <td><DeleteButton movieName={movie.name} email={currentUserEmail}/></td>
           </tr>
          ))} 
         </tbody>

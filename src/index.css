@@ -1,25 +1,19 @@
 *{
     box-sizing:border-box;
 }
-.app{
-  
-    margin:0;
-    width:100vw;
-    height:100vh;
-}
 #main-heading{
     color:rgb(255,255,255);
     font-size:18px;
     text-align:center;
     padding:8px;
 }
-.searchArea{
+/*.searchArea{
     outline:none;
     padding:14px;
     border-radius:16px;
     margin:5px;
     color:black;
-  }
+  }*/
 body,html{
     margin:0;
     padding:0;
@@ -37,45 +31,42 @@ img{
      margin-top: 20px;
     display:flex;
 }*/
-  .searchButton{
+  /*.searchButton{
     padding:12px;
     background-color:orangered;
     color:#000;
     border-radius:25px;
-  }
+  }*/
   .card-body p{
     color:blue;
   }
 .footer{
     background-color:orangered;
-    padding:10px;
     width:100%; 
     display:flex;
     flex-direction: row;
     justify-content:space-around;
+     position: fixed;
+    bottom: 0;
+    left: 0;
+ 
+   
     
 }
+/*
+*/
 i{
     color:rgb(255,255,255);
     font-size:30px;
 
   }
-  
- .row{
-    margin:25px;
-    display:grid;
-    grid-template-columns: auto auto auto; 
-    column-gap:15px;
-    row-gap:30px;
-    padding:10%;
-  }
-  .row div{
-    width:100px;
-  }
-  /*.row div{
-    width:250px;
-    padding:10px;
-  }*/
+    .container{
+        display:grid;
+        grid-template-columns: repeat(2,2fr);
+        gap:45px;
+        padding:15px 45px;
+        margin:15px;
+    }
 .nav-link:hover{
     background-color:orange;
     color:black;
@@ -87,12 +78,12 @@ i{
     color:rgb(255,255,255);
     border-radius:25px;
 }
-form{
+/*form{
     display: grid;
     justify-content: center;
     align-items: center;
     padding:12px;
-}
+}*/
 form label{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: larger;
@@ -100,6 +91,34 @@ form label{
 }
 form input{
     background-color:azure;
+}
+/*@media screen and (max-width:450px) {
+    form{
+        width:180px;
+        padding:4px;
+        /*margin:12px;*/
+    /*}
+    form input{
+        width:50%;
+    }
+   /* #userphone{
+        width:20px;
+    }*/
+    
+/*}*/
+@media screen and (max-width:768px){
+    .row{
+    margin:25px;
+    display:grid;
+    grid-template-columns: auto auto auto; 
+    column-gap:15px;
+    row-gap:30px;
+    padding:10%;
+  }
+  .row div{
+    width:100px;
+  }
+
 }
 /*@media screen and (max-width:468px){
     .row div{
@@ -122,3 +141,8 @@ form input{
     
     }
 }*/
+@media (min-width:992px){
+    .container{
+        grid-template-columns: repeat(3,2fr);
+    }
+}

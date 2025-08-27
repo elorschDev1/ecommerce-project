@@ -8,12 +8,10 @@ import Damaged from "./Damaged";
 const Action = () => {
   return (
     <>
-    <div className="row">
+    <div className="container">
     <WrathOfMan/>
     <OperationFortune/>
     <FalconRising/>
-    </div>
-    <div className="row">
     <BloodAndBone/>
     <HeartOfStone/>
     <Damaged/>

@@ -1,48 +1,38 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import AddToCart from './AddToCart'
+import React from 'react';
+import AddToCart from './AddToCart';
+import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 const UpgradedDetails = () => {
   return (
     <>
-    <div id="upgradedSlides" className="carousel slide d-flex justify-content-center align-items-center" data-bs-ride="carousel">
-    <div className="carousel-indicators">
-    <button type="button" data-bs-target="#upgradedSlides" data-bs-slide-to="0" className="active"></button>
-    <button type="button" data-bs-target="#upgradedSlides" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#upgradedSlides" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#upgradedSlides" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#upgradedSlides" data-bs-slide-to="4"></button>
-    </div>
-    <div className="carousel-inner w-50">
-    <div className="carousel-item active">
-    <img src="upgraded10.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="upgraded2.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="upgraded3.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="upgraded4.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="upgraded5.jpg" className="d-block w-100"/>
-    </div>
-    </div>
-    <button className="carousel-control-prev" type="button" data-bs-target="#upgradedSlides" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon"></span>
-    </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#upgradedSlides" data-bs-slide="next">
-    <span className="carousel-control-next-icon"></span>
-    </button>
-    </div>
-    <div className="d-flex justify-content-center align-items-center text-white flex-column">
-     <div className="w-50">
-    <h1>Movie Description</h1>
-    <p>An aspiring art intern is invited on a last minute work trip to London, where she meets a handsome stranger.</p>
-    </div> 
-    <div className="Upgraded"> <AddToCart/></div>
-    </div>
+     <div className='d-flex flex-column justify-content-center align-items-center p-4 m-4'>
+           <Card className='w-100'>
+                          <Carousel>
+                            <Carousel.Item interval={1000}>
+                              <img src="upgraded10.jpg" alt="Image from the movie, Upgraded."  className='w-100 h-100 d-block' />
+                            </Carousel.Item>
+                              <Carousel.Item>
+                              <img src="upgraded2.jpg" alt="Image from the movie, Upgraded."  className='w-100 h-100 d-block' />
+                            </Carousel.Item >
+                              <Carousel.Item interval={1000}>
+                              <img src="upgraded3.jpg" alt="Image from the movie, Upgraded." className='w-100 h-100 d-block' />
+                            </Carousel.Item>
+                             <Carousel.Item interval={1000}>
+                              <img src="upgraded4.jpg" alt="Image from the movie, Upgraded." className='w-100 h-100 d-block' />
+                            </Carousel.Item>
+                             <Carousel.Item interval={1000}>
+                              <img src="upgraded5.jpg" alt="Image from the movie, Upgraded." className='w-100 h-100 d-block' />
+                            </Carousel.Item>
+                          </Carousel>
+                          <Card.Body className='d-flex flex-column'>
+                          <Card.Title>Movie Description</Card.Title>
+                               <Card.Text>An aspiring art intern is invited on a last minute work trip to London, where she meets a handsome stranger.</Card.Text>
+                                      <div className="d-flex flex-column justify-content-center align-items-center"> <div className="Upgraded"> <AddToCart/></div> </div>
+                                    </Card.Body>
+                        </Card>
+                        </div>
+   
     </>
   )
 }

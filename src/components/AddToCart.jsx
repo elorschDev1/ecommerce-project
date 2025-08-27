@@ -11,13 +11,13 @@ const AddToCart = () => {
   let {addOccured,setAddOccured}=useContext(MovieContext);
  let navigate=useNavigate();
 let moviesCopy=[...selectedMovies];
-console.log(moviesCopy);
-
   const handleClick=(e)=>{
   setButtonClicked(true);
+  console.log(e.target.parentNode.className);
   if(buttonClicked===true&&loggedIn===false)navigate('/login');
  if(loggedIn===true&&buttonClicked===true){
  addMovie(e.target.parentNode.className);
+
  }
   }
  const client={

@@ -1,48 +1,42 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import AddToCart from './AddToCart';
+import { Card } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 const ArcadianDetails = () => {
   return (
     <>
-    <div id="arcadianSlides" className="carousel slide d-flex flex-column justify-content-center align-items-center" data-bs-ride="carousel">
-    <div className="carousel-indicators">
-    <button type="button" data-bs-target="#arcadianSlides" data-bs-slide-to="0" className="active"></button>
-    <button type="button" data-bs-target="#arcadianSlides" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#arcadianSlides" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#arcadianSlides" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#arcadianSlides" data-bs-slide-to="4"></button>
-    </div>
-    <div className="carousel-inner w-50">
-    <div className="carousel-item active">
-    <img src="arcadian1.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="arcadian2.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="arcadian3.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="arcadian4.jpg" className="d-block w-100"/>
-    </div>
-     <div className="carousel-item">
-    <img src="arcadian5.jpg" className="d-block w-100"/>
-    </div>
-    </div>
-    <button className="carousel-control-prev" type="button" data-bs-target="#arcadianSlides" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon"></span>
-    </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#arcadianSlides" data-bs-slide="next">
-    <span className="carousel-control-next-icon"></span>
-    </button>
-    </div>
-    <div className="d-flex  justify-content-center align-items-center text-white flex-column">
-      <div className="w-50">
-    <h1>Movie Description</h1>
-    <p>In the near future on a decimated earth, Paul and his twin sons face a terror at night when  ferocious creatures awaken. When Paul is nearly killed , the boys come up with a plan for survival, using everything their father taught them to keep him alive.</p>
-    </div> 
-    <div className="Arcadian"> <AddToCart/></div>
-    </div>
+      <div className='d-flex flex-column justify-content-center align-items-center p-4 m-4'>
+                       <Card className='w-100'>
+                                      <Carousel>
+                                        <Carousel.Item interval={1000}>
+                                          <img src="arcadian1.jpg" alt="Image from the movie, Arcadian."  className='w-100 h-100 d-block' />
+                                        </Carousel.Item>
+                                          <Carousel.Item>
+                                          <img src="arcadian2.jpg" alt="Image from the movie, Arcadian."  className='w-100 h-100 d-block' />
+                                        </Carousel.Item >
+                                          <Carousel.Item interval={1000}>
+                                          <img src="arcadian3.jpg" alt="Image from the movie, Arcadian." className='w-100 h-100 d-block' />
+                                        </Carousel.Item>
+                                         <Carousel.Item interval={1000}>
+                                          <img src="arcadian4.jpg" alt="Image from the movie, Arcadian." className='w-100 h-100 d-block' />
+                                        </Carousel.Item>
+                                         <Carousel.Item interval={1000}>
+                                          <img src="arcadian5.jpg" alt="Image from the movie, Arcadian." className='w-100 h-100 d-block' />
+                                        </Carousel.Item>
+                                      </Carousel>
+                                      <Card.Body className='d-flex flex-column'>
+                                      <Card.Title>Movie Description</Card.Title>
+                                           <Card.Text>In the near future on a decimated earth, Paul and his twin sons face a terror at night when  ferocious creatures awaken. When Paul is nearly killed , the boys come up with a plan for survival, using everything their father taught them to keep him alive.</Card.Text>
+                                                  <div className="d-flex flex-column justify-content-center align-items-center"> 
+                                                    <div className='Arcadian'>
+                                                    <AddToCart/> 
+                                                    </div>
+                                                    </div>
+                                                </Card.Body>
+                                    </Card>
+                                    </div>
+      
   
     </>
   )

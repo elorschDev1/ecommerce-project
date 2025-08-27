@@ -7,16 +7,13 @@ import TripleFrontier from "./TripleFrontier";
 const Adventure = () => {
   return (
     <>
-    <div className="row">
+    <div className="container">
       <HiddenStrike/>
       <YearOne/>
       <TheLostOne/>
-
-    </div>
-    <div className="row">
-    <Damsel/>
-    <TripleFrontier/>
-    <TheRevenant/>
+      <Damsel/>
+     <TripleFrontier/>
+     <TheRevenant/>
     </div>
     
     

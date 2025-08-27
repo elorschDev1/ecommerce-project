@@ -6,7 +6,8 @@ const PurchaseButtonProvider = ({children}) => {
     let [purchaseInitiated,setPurchaseInitiated]=useState(false);
     let [purchasedMovie,setPurchasedMovie]=useState("");
     let [purchasedMoviePrice,setPurchasedMoviePrice]=useState(0);
-  return (<PurchaseButtonContext.Provider value={{purchaseInitiated,setPurchaseInitiated,purchasedMovie,setPurchasedMovie,purchasedMoviePrice,setPurchasedMoviePrice}}>{children}</PurchaseButtonContext.Provider> )
+    let [deleteInitiated,setDeleteInitiated]=useState(false);
+  return (<PurchaseButtonContext.Provider value={{purchaseInitiated,setPurchaseInitiated,purchasedMovie,setPurchasedMovie,purchasedMoviePrice,setPurchasedMoviePrice,deleteInitiated,setDeleteInitiated}}>{children}</PurchaseButtonContext.Provider> )
 }
 
 export default PurchaseButtonProvider
